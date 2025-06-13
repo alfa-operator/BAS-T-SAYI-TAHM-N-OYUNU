@@ -1,0 +1,23 @@
+#SAYI TAHMİN OYUNU
+import random #SAYI ÜRETME MODÜLÜNÜ İÇE AKTARIYORUZ
+
+deneme=55 #DENEME HAKKI SAYISI DEĞİŞKENİ
+print("SAYI TAHMİN OYUNUNA HOŞGELDİNİZ!(OYUN HER SEFERİNDE YENİ SAYI ÜRETİR YANİ TAHMİN OLASILIĞI 99 DA 1 İŞ OYUN BİRAZ GICIK HABERİNİZOLSUN") # EKRAYA YAZI YAZDIRMA
+while deneme > 0: # BU DÖNGÜ DENEME HAKKI 0 DAN BÜYÜK OLDUĞU SÜRECE ÇALIŞIR
+
+    sayı=int(input(f'{deneme} hakkınız kaldı: '))#KULLANICIDAN SAYI GİRMESİNİ İSTER
+
+    deneme=deneme-1 #HER DENEMEDE DENEME HAKKINI 1 AZALTIR
+
+    if sayı==random.randint(1,99): # KOŞULLU İFADELER, İŞLEMİ GİRİLEN DEĞERİ KONTROL EDER == EŞİTSE DEMEK GİRİLEN DEĞER KENDİNDEN SONRAKİNE EŞİTSE ÇALIŞIR.
+        #VE SONRASINDAKİ ADIMA GEÇER
+        print("TEBRİKLER")
+        break #DÖNGÜYÜ SONLANDIRIR
+    elif sayı<random.randint(1,99): # KOŞULLU İFADELER, İŞLEMİ GİRİLEN DEĞERİ KONTROL EDER == EŞİTSE DEMEK GİRİLEN DEĞER KENDİNDEN SONRAKİNE EŞİTSE ÇALIŞIR.
+        #VE SONRASINDAKİ ADIMA GEÇER
+        print("tekrar deneyin")
+
+
+if deneme == 0:
+    print("deneme hakkınız bitti.") # KOŞULLU İFADELER, İŞLEMİ GİRİLEN DEĞERİ KONTROL EDER == EŞİTSE DEMEK GİRİLEN DEĞER KENDİNDEN SONRAKİNE EŞİTSE ÇALIŞIR.
+    #VE SONRASINDAKİ ADIMA GEÇER
